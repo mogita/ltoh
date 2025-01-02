@@ -1,6 +1,15 @@
 # ltoh
 
-gitLab To gitHub. A dead simple script for migrating a project from GitLab to GitHub, including code repository, issues, and variables. Additionally creating a mirrored project on a self-hosted Forgejo server to the GitHub repository.
+gitLab To gitHub. A dead simple script for migrating a project from GitLab to GitHub, including code repository, issues, and variables. Additionally creating a mirrored project on a self-hosted Forgejo server to the GitHub repository. Workflow in detail:
+
+1. Fetch the GitLab project
+2. Create a new GitHub repository
+3. Pull the GitLab repository and push it to the GitHub repository (requires SSH access to both repositories)
+4. Fetch the GitLab variables, and create them on the GitHub repository if any
+5. Fetch the GitLab issues, and create them on the GitHub repository if any
+6. Create a mirrored project on the Forgejo server to the new GitHub repository
+7. Create the variables on the Forgejo server if any
+8. Done
 
 To install dependencies:
 
